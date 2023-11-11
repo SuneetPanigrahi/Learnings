@@ -1,4 +1,4 @@
-export interface unplashImage{
+export interface UnplashImage{
     description:string,
     user:{
         username:string

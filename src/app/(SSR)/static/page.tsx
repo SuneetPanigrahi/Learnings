@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { unplashImage } from "@/models/unsplashImage";
+
 import { Alert } from "@/components/bootstrap";
 import Link from "next/link";
 type Props = {};
@@ -17,6 +17,7 @@ const StaticPage = async (props: Props) => {
 
   let image = await response.json();
 
+console.log("STATIC_IMAGE",image);
 
   let width = Math.min(500, image.width);
   let height = (width / image.width) * image.height;

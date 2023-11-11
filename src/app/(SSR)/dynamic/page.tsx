@@ -15,7 +15,7 @@ const DynamicPage = async (props: Props) => {
   let response = await fetch(
     "https://api.unsplash.com/photos/random?client_id=" + process.env.ACCESS_KEY,
     {
-        // cache:"no-cache/no-store"
+        // cache:"no-cache(or)no-store"
         // next:{revalidate:0}
     }
   );

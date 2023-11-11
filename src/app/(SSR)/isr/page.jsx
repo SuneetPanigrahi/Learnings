@@ -10,13 +10,13 @@ export const metadata = {
   title: "Incrementsl Static Regeneration Fetch-Image Gallery app",
 };
 
-export const revalidate = 15;
+// export const revalidate = 15;
 const ISR = async (props) => {
   let response = await fetch(
     "https://api.unsplash.com/photos/random?client_id=" +
       process.env.ACCESS_KEY,
     {
-      // next:{revalidate:15}
+       next:{revalidate:15}
     }
   );
 

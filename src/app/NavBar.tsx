@@ -1,12 +1,13 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 type Props = {};
 
 const NavBar = (props: Props) => {
   let pathname = usePathname();
+
   return (
     <Navbar
       bg="primary"
@@ -17,7 +18,7 @@ const NavBar = (props: Props) => {
     >
       <Container>
         <Navbar.Brand as={Link} href="/">
-          Next JS 13.4 Image Gallery
+          Image Gallery
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="main-navbar" />
         <Navbar.Collapse id="main-navbar">

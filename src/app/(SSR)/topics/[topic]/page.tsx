@@ -1,4 +1,4 @@
-import { unplashImage } from "@/models/unsplashImage";
+import { UnplashImage } from "@/models/unsplashImage";
 import Image from "next/image";
 import styles from "./TopicPage.module.css";
 import { Alert } from "@/components/bootstrap";
@@ -26,7 +26,7 @@ export default async function page({ params: { topic } }: PageProps) {
   let response = await fetch(
     `https://api.unsplash.com/photos/random?query=${topic}&count=30&client_id=${process.env.ACCESS_KEY}`
   );
-  let images: unplashImage[] = await response.json();
+  let images: UnplashImage[] = await response.json();
 
   return (
     <div>
